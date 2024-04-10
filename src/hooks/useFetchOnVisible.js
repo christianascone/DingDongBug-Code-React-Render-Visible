@@ -24,7 +24,7 @@ const useFetchOnVisible = (ref, fetchFn) => {
           });
         }
       },
-      { threshold: 0.1 }, // the ratio of the element's area that is visible
+      { threshold: 0.1 } // the ratio of the element's area that is visible
     );
 
     // observe the ref element
@@ -34,7 +34,7 @@ const useFetchOnVisible = (ref, fetchFn) => {
     return () => {
       observer.disconnect();
     };
-  }, [ref, fetchFn, loading]); // the dependencies of the effect
+  }, [ref, data, fetchFn, loading]); // the dependencies of the effect
 
   // return the data and loading state
   return [data, loading];
