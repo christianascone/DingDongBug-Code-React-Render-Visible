@@ -32,7 +32,7 @@ const useFetchOnVisible = (ref, fetchFn) => {
 
     // unobserve the ref element when the component unmounts
     return () => {
-      if (ref && ref.current) observer.unobserve(ref.current);
+      observer.disconnect();
     };
   }, [ref, fetchFn, loading]); // the dependencies of the effect
 
