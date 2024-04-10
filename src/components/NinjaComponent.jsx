@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import PropTypes from "prop-types";
 import useFetchOnVisible from "../hooks/useFetchOnVisible";
 
 const NinjaComponent = ({ id }) => {
@@ -24,4 +25,7 @@ const NinjaComponent = ({ id }) => {
   );
 };
 
+NinjaComponent.propTypes = {
+  id: PropTypes.number,
+};
 export default NinjaComponent;
